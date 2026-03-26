@@ -1,0 +1,43 @@
+HTML5 introduce nuevos elementos semánticos como <details> y <summary>, que permiten crear contenido desplegable de forma nativa, sin necesidad de JavaScript.
+
+<details>
+
+El elemento <details> se utiliza para contener información que el usuario puede mostrar u ocultar.
+Por defecto, el contenido está contraído (oculto) y se puede expandir al hacer clic.
+
+Se usa comúnmente para:
+
+preguntas frecuentes (FAQ)
+información adicional
+contenido opcional
+<summary>
+
+El elemento <summary> define el título o encabezado visible del <details>.
+Es la parte en la que el usuario hace clic para expandir o contraer el contenido.
+
+Ejemplo básico
+<details>
+  <summary>Ver más información</summary>
+  <p>Este es el contenido adicional que se puede mostrar u ocultar.</p>
+</details>
+Comportamiento
+El contenido dentro de <details> se oculta por defecto
+Al hacer clic en <summary>, el contenido se expande o se contrae
+No requiere JavaScript para funcionar
+Atributo importante
+open → hace que el contenido esté visible por defecto
+
+Ejemplo:
+
+<details open>
+  <summary>Información</summary>
+  <p>Este contenido aparece abierto desde el inicio.</p>
+</details>
+Ventajas
+Fácil de implementar
+Mejora la experiencia del usuario
+No requiere código adicional (JavaScript)
+Mantiene una estructura semántica clara
+Conclusión
+
+Los elementos <details> y <summary> permiten crear contenido interactivo y desplegable de forma simple y nativa en HTML5, mejorando la usabilidad y reduciendo la necesidad de scripts adicionales.

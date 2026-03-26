@@ -1,0 +1,40 @@
+HTML5 permite diseñar la estructura de una página web usando elementos semánticos, lo que hace el código más claro, organizado y comprensible tanto para desarrolladores como para navegadores.
+
+¿Qué significa “semántico”?
+
+Semántico significa que las etiquetas describen el propósito del contenido, no solo cómo se ve.
+Por ejemplo, en lugar de usar muchos <div>, se utilizan etiquetas con significado.
+
+Elementos semánticos principales
+<header> → representa el encabezado de la página o de una sección (logo, título, etc.)
+<nav> → contiene los enlaces de navegación (menús)
+<main> → contenido principal de la página
+<section> → agrupa contenido relacionado
+<article> → contenido independiente (como una noticia o post)
+<aside> → contenido secundario (barra lateral, publicidad, etc.)
+<footer> → pie de página (información adicional, contacto, etc.)
+Ejemplo de estructura básica
+
+Una página típica en HTML5 puede organizarse así:
+
+header
+nav
+main
+section
+article
+aside
+footer
+Ventajas del uso de elementos semánticos
+Código más limpio y fácil de entender
+Mejor organización del contenido
+Mejora el SEO (los buscadores entienden mejor la página)
+Mayor accesibilidad para lectores de pantalla
+Facilita el mantenimiento del código
+Diferencia con HTML antiguo
+
+Antes se usaba principalmente <div> para todo, lo que hacía difícil entender la estructura.
+Con HTML5, cada parte de la página tiene una etiqueta específica con significado.
+
+Conclusión
+
+Diseñar la estructura de una página usando HTML semántico permite crear sitios web más claros, accesibles y optimizados, siguiendo buenas prácticas modernas de desarrollo.

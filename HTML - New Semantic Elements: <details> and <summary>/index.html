@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Semánticos: Details y Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        details {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos Semánticos HTML5</h1>
+
+    <details>
+        <summary>¿Qué es HTML5?</summary>
+        <p>HTML5 es la última versión estándar de HTML que introduce nuevos elementos semánticos para mejorar la estructura del contenido.</p>
+    </details>
+
+    <details>
+        <summary>Ventajas de &lt;details&gt; y &lt;summary&gt;</summary>
+        <ul>
+            <li>Mejora la accesibilidad</li>
+            <li>Contenido interactivo sin JavaScript</li>
+            <li>Semántica clara</li>
+        </ul>
+    </details>
+
+    <details open>
+        <summary>Preguntas Frecuentes</summary>
+        <p>Este bloque está abierto por defecto gracias al atributo <code>open</code>.</p>
+    </details>
+</body>
+</html>

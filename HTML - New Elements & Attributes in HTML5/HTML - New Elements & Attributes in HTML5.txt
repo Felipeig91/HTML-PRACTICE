@@ -1,0 +1,56 @@
+HTML5 introduce nuevos elementos y atributos que hacen el código más semántico, funcional y fácil de mantener.
+
+Nuevos elementos en HTML5
+
+Elementos estructurales (semánticos):
+
+<header> → encabezado de una página o sección
+<nav> → navegación (menús)
+<section> → sección de contenido
+<article> → contenido independiente (post, noticia)
+<aside> → contenido secundario (sidebar)
+<footer> → pie de página
+
+Elementos multimedia:
+
+<audio> → reproducir audio
+<video> → reproducir video
+<source> → especificar fuentes de media
+<track> → subtítulos en video
+
+Elementos gráficos:
+
+<canvas> → dibujar gráficos con JavaScript
+<svg> → gráficos vectoriales
+
+Elementos de formularios:
+
+<datalist> → lista de opciones sugeridas
+<output> → resultado de una operación
+<progress> → barra de progreso
+<meter> → medida dentro de un rango
+
+Otros elementos útiles:
+
+<mark> → resaltar texto
+<time> → fechas y horas
+<figure> → contenido multimedia con contexto
+<figcaption> → descripción de <figure>
+<details> → contenido desplegable
+<summary> → título de <details>
+Nuevos atributos en HTML5
+
+Atributos para formularios:
+
+placeholder → texto de ayuda dentro del input
+required → campo obligatorio
+autocomplete → autocompletado
+autofocus → foco automático
+pattern → validación con expresiones regulares
+
+Tipos de input nuevos:
+
+email
+url
+number
+range

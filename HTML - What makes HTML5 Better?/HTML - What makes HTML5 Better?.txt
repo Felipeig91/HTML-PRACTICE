@@ -1,0 +1,40 @@
+HTML5 no es solo una “nueva versión” de HTML. Soluciona problemas reales que existían antes y hace más fácil crear aplicaciones web modernas.
+
+Multimedia nativa (sin plugins)
+Antes necesitabas Flash u otros plugins para reproducir video o audio.
+Con HTML5 puedes usar directamente las etiquetas <video> y <audio>.
+Esto mejora el rendimiento y la seguridad.
+Diseño pensado para móviles
+HTML5 funciona mejor con diseño responsive.
+Se adapta bien a celulares, tablets y pantallas táctiles.
+Es clave para el desarrollo web actual.
+Elementos semánticos
+En lugar de usar muchos <div>, ahora existen etiquetas como:
+<header>, <nav>, <section>, <article>, <footer>
+
+Esto mejora:
+
+la organización del código
+el SEO
+la mantenibilidad
+APIs integradas
+HTML5 incluye funcionalidades que antes requerían librerías externas:
+Geolocalización
+Local Storage (almacenamiento en el navegador)
+Canvas (gráficos y juegos)
+Drag and Drop
+Formularios mejorados
+Nuevos tipos de input como:
+email
+date
+number
+range
+
+Además, validación automática sin necesidad de mucho JavaScript.
+
+Mejor rendimiento y seguridad
+Elimina la dependencia de plugins como Flash.
+Carga más rápido y es más seguro.
+
+Conclusión:
+HTML5 es mejor porque simplifica el desarrollo, mejora el rendimiento, funciona bien en móviles y ofrece herramientas modernas integradas.

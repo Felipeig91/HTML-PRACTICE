@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Define el conjunto de caracteres usado en la página -->
+    <meta charset="UTF-8" />
+    <!-- Configura la ventana gráfica para móviles y escritorio -->
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>tables</title>
+    <style>
+      /* Estilos para la tabla principal */
+      table {
+        width: 700px;
+        background-color: lightblue;
+        margin-top: 24px;
+        margin-left: 24px;
+      }
+
+      /* Estilos compartidos para la tabla, las celdas y los encabezados */
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size: 24px;
+      }
+
+      /* Espaciado interior para celdas y encabezados */
+      td,
+      th {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Estructura principal de la tabla -->
+    <table>
+      <!-- Pie de título de la tabla, se muestra arriba de la tabla -->
+      <caption>
+        Table Caption
+      </caption>
+      <tr>
+        <!-- Celda que abarca 6 filas usando rowspan -->
+        <td rowspan="6">hours</td>
+        <!-- Encabezados de columna -->
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+        <th>Header 4</th>
+      </tr>
+      <tr>
+        <!-- Primera fila de datos -->
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+      </tr>
+      <tr>
+        <!-- Célula que ocupa las 4 columnas con colspan -->
+        <td style="text-align: center" colspan="4">lunch break</td>
+      </tr>
+      <tr>
+        <!-- Segunda fila de datos -->
+        <td>Cell 5</td>
+        <td>Cell 6</td>
+        <td>Cell 7</td>
+        <td>Cell 8</td>
+      </tr>
+      <tr>
+        <!-- Tercera fila de datos -->
+        <td>Cell 9</td>
+        <td>Cell 10</td>
+        <td>Cell 11</td>
+        <td>Cell 12</td>
+      </tr>
+    </table>
+  </body>
+</html>

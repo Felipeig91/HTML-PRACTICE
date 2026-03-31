@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to HTML Forms</title>
+  </head>
+  <body>
+    <!-- El elemento <form> crea un formulario. -->
+    <!-- Todos los campos dentro de este contenedor forman parte de la misma solicitud. -->
+    <form action="">
+      <!-- <label> es la etiqueta visible para el usuario. -->
+      <!-- El atributo for debe coincidir con el id del input relacionado. -->
+      <label for="name">Name:</label>
+
+      <!-- input de tipo text para un nombre. -->
+      <!-- id se usa para enlazar con <label> y también para seleccionar el elemento con CSS/JS. -->
+      <!-- name es el nombre que se envía al servidor; sin name no se incluirá en el formulario. -->
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+
+      <!-- <br /> crea un salto de línea para separar visualmente los campos. -->
+      <br /><br />
+
+      <!-- Otra etiqueta para el campo de email. -->
+      <label for="email">Email:</label>
+
+      <!-- input de tipo email. -->
+      <!-- El navegador valida el formato automáticamente cuando el usuario intenta enviar. -->
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+
+      <br /><br />
+
+      <!-- Este botón envía el formulario. -->
+      <!-- Al hacer clic, el navegador envía los datos al valor de action. -->
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Explicación adicional: -->
+    <!-- action="" significa que el formulario se envía a la misma página actual. -->
+    <!-- Si se usa method="get" (por defecto), los datos se agregan a la URL. -->
+    <!-- Si se quiere enviar datos sin mostrarlos en la URL, se usa method="post". -->
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Attributes</title>
+    <style>
+      /* Usar box-sizing border-box para que el padding se incluya en el ancho total */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      /* Centrar el contenido de la página y aplicar fondo degradado */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #eef2f7 0%, #ffffff 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      /* Limitar el ancho del contenido para que el formulario no sea demasiado ancho */
+      .page-wrapper {
+        width: 100%;
+        max-width: 720px;
+      }
+      /* Estilo de tarjeta para el contenedor del formulario */
+      .form-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+      /* Estilo del título de la tarjeta */
+      .form-card h1 {
+        margin-top: 0;
+        margin-bottom: 24px;
+        font-size: 1.8rem;
+        text-align: center;
+        color: #1f2937;
+      }
+      /* Información breve sobre los atributos usados en este formulario */
+      .attribute-info {
+        background: #f8fafc;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-bottom: 20px;
+        color: #374151;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+      .attribute-info ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      .attribute-info li {
+        margin-bottom: 8px;
+      }
+      /* Layout en grid para separar los campos del formulario */
+      .field-group {
+        display: grid;
+        gap: 12px 16px;
+      }
+      /* Etiquetas para que el texto quede visible y ordenado */
+      label {
+        display: block;
+        font-weight: 600;
+        color: #111827;
+      }
+      /* Estilo común para los campos de entrada */
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      /* Estilo cuando el campo está enfocado */
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+      }
+      /* Layout horizontal para opciones de radio y checkbox */
+      .option-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+      .option-row input[type="radio"],
+      .option-row input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+      }
+      .option-row label {
+        margin: 0;
+        font-weight: 500;
+      }
+      /* Estilo para texto de ayuda adicional */
+      .small-text {
+        color: #6b7280;
+        font-size: 0.95rem;
+      }
+      /* Ajustes responsivos para pantallas pequeñas */
+      @media (max-width: 600px) {
+        .form-card {
+          padding: 18px;
+        }
+        body {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor principal que centra el formulario en la pantalla -->
+    <div class="page-wrapper">
+      <!-- Tarjeta blanca con sombra para destacar el formulario -->
+      <div class="form-card">
+        <h1>Input Attributes</h1>
+        <div class="attribute-info">
+          <strong>Descripción de atributos:</strong>
+          <ul>
+            <li>
+              <strong>autocomplete</strong>: sugiere valores guardados por el
+              navegador.
+            </li>
+            <li>
+              <strong>autofocus</strong>: enfoca el campo al cargar la página.
+            </li>
+            <li>
+              <strong>placeholder</strong>: muestra un texto de ejemplo dentro
+              del campo.
+            </li>
+            <li>
+              <strong>pattern</strong>: valida el formato usando expresiones
+              regulares.
+            </li>
+            <li>
+              <strong>required</strong>: obliga a completar el campo antes de
+              enviar.
+            </li>
+            <li>
+              <strong>step</strong>: define el incremento para campos numéricos.
+            </li>
+            <li>
+              <strong>multiple</strong>: permite seleccionar varios archivos.
+            </li>
+            <li>
+              <strong>select</strong>: permite elegir una opción de una lista
+              desplegable.
+            </li>
+            <li>
+              <strong>width / height</strong>: ajusta el tamaño de un input tipo
+              imagen.
+            </li>
+            <li>
+              <strong>form</strong>: conecta un campo a un formulario distinto
+              por su id.
+            </li>
+            <li>
+              <strong
+                >formaction / formmethod / formenctype / formtarget /
+                formnovalidate</strong
+              >: configuran el envío del formulario desde un botón específico.
+            </li>
+          </ul>
+        </div>
+        <!-- Agrupa los campos del formulario con espacio uniforme -->
+        <div class="field-group">
+          <div>
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="4"
+              maxlength="20"
+              pattern="[A-Za-z0-9]+"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <!-- select permite elegir una opción de una lista desplegable -->
+            <label for="question-select">Selecciona una pregunta</label>
+            <select id="question-select" name="question-select">
+              <option value="">Seleccione...</option>
+              <option value="pregunta1">¿Cuál es tu color favorito?</option>
+              <option value="pregunta2">¿Cuál es tu comida favorita?</option>
+              <option value="pregunta3">¿En qué ciudad vives?</option>
+            </select>
+          </div>
+          <div>
+            <!-- select para elegir género -->
+            <label for="gender">Género</label>
+            <select id="gender" name="gender">
+              <option value="">Seleccione...</option>
+              <option value="female">Femenino</option>
+              <option value="male">Masculino</option>
+              <option value="nonbinary">No binario</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+            />
+          </div>
+          <div>
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              max="100"
+              required
+            />
+          </div>
+          <div>
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" />
+          </div>
+          <div>
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color" />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" />
+          </div>
+          <div>
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" />
+          </div>
+          <div>
+            <label for="datetime-local">Date and Time</label>
+            <input
+              type="datetime-local"
+              id="datetime-local"
+              name="datetime-local"
+            />
+          </div>
+          <div>
+            <label for="month">Month</label>
+            <input type="month" id="month" name="month" />
+          </div>
+          <div>
+            <label for="week">Week</label>
+            <input type="week" id="week" name="week" />
+          </div>
+          <div>
+            <label for="file">File</label>
+            <input type="file" id="file" name="file" />
+          </div>
+          <div class="option-row">
+            <input type="checkbox" id="checkbox" name="checkbox" />
+            <label for="checkbox">Checkbox</label>
+          </div>
+          <div class="option-row">
+            <input type="radio" id="radio1" name="radio" value="option1" />
+            <label for="radio1">Option 1</label>
+            <input type="radio" id="radio2" name="radio" value="option2" />
+            <label for="radio2">Option 2</label>
+          </div>
+          <div>
+            <label for="range">Range</label>
+            <input type="range" id="range" name="range" min="0" max="100" />
+          </div>
+          <div>
+            <label for="datalist">Datalist</label>
+            <input list="browsers" id="datalist" name="datalist" />
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+          </div>
+          <div>
+            <!-- autocomplete sugiere valores guardados en el navegador -->
+            <label for="autocomplete">Autocomplete</label>
+            <input
+              type="text"
+              id="autocomplete"
+              name="autocomplete"
+              autocomplete="on"
+              placeholder="Escribe 'c' para ver sugerencias"
+            />
+          </div>
+          <div>
+            <!-- autofocus enfoca automáticamente este campo al cargar la página -->
+            <label for="autofocus">Autofocus</label>
+            <input
+              type="text"
+              id="autofocus"
+              name="autofocus"
+              autofocus
+              placeholder="Este campo se enfoca al cargar"
+            />
+          </div>
+          <div>
+            <!-- placeholder muestra un texto de ejemplo dentro del campo -->
+            <label for="placeholder-example">Placeholder</label>
+            <input
+              type="text"
+              id="placeholder-example"
+              name="placeholder-example"
+              placeholder="Texto de ejemplo"
+            />
+          </div>
+          <div>
+            <!-- pattern obliga un formato específico con expresión regular -->
+            <label for="pattern-example">Pattern</label>
+            <input
+              type="text"
+              id="pattern-example"
+              name="pattern-example"
+              pattern="[A-Za-z]{3}[0-9]{3}"
+              placeholder="abc123"
+              title="3 letras y 3 números"
+            />
+          </div>
+          <div>
+            <!-- required marca el campo como obligatorio antes de enviar -->
+            <label for="required-example">Required</label>
+            <input
+              type="text"
+              id="required-example"
+              name="required-example"
+              required
+              placeholder="Campo obligatorio"
+            />
+          </div>
+          <div>
+            <!-- step define el tamaño del salto para valores numéricos -->
+            <label for="step-example">Step</label>
+            <input
+              type="number"
+              id="step-example"
+              name="step-example"
+              min="0"
+              max="10"
+              step="0.5"
+              placeholder="0.5"
+            />
+          </div>
+          <div>
+            <!-- multiple permite seleccionar varios archivos a la vez -->
+            <label for="multiple-example">Multiple</label>
+            <input
+              type="file"
+              id="multiple-example"
+              name="multiple-example"
+              multiple
+            />
+          </div>
+          <div>
+            <!-- width y height establecen el tamaño del input type=image -->
+            <label>Height and Width</label>
+            <input
+              type="image"
+              src="https://via.placeholder.com/120x40?text=OK"
+              alt="Enviar"
+              width="120"
+              height="40"
+            />
+          </div>
+          <div class="option-row">
+            <!-- form asocia este input a un formulario distinto por id -->
+            <label for="outside-input">Input con atributo form</label>
+            <input
+              type="text"
+              id="outside-input"
+              name="outside-input"
+              form="demoForm"
+              placeholder="Este campo usa form='demoForm'"
+            />
+          </div>
+          <div>
+            <!--formaction, formmethod, formenctype, formtarget y formnovalidate funcionan solo en botones de envío -->
+            <label>Submit con atributos de formulario</label>
+            <input
+              type="submit"
+              value="Enviar formulario"
+              form="demoForm"
+              formaction="https://example.com/submit"
+              formmethod="post"
+              formenctype="multipart/form-data"
+              formtarget="_blank"
+              formnovalidate
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="demoForm" action="https://example.com/submit"></form>
+  </body>
+</html>

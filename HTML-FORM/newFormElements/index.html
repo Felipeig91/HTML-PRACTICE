@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html5 form Elements</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .form-container {
+        max-width: 600px;
+        width: 100%;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .form-container {
+          padding: 15px;
+        }
+        input {
+          font-size: 16px; /* Prevent zoom on iOS */
+        }
+      }
+    </style>
+  <body>
+    <div class="form-container">
+      <!-- datalist, dataput -->
+      <label for="browser">Choose your browser from the list:</label>
+      <input list="browsers" id="browser" name="browser" />
+      <datalist id="browsers">
+        <option value="Edge"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+      <br />
+      <br />
+      <label for="myColor">Choose a color:</label>
+      <input type="color" id="myColor" name="myColor" value="#ff0000" />
+      <br />
+      <br />
+      <label for="myDate">Select a date:</label>
+      <input type="date" id="myDate" name="myDate" />
+      <br />
+      <br />
+      <label for="myDateTime">Select a date and time:</label>
+      <input type="datetime-local" id="myDateTime" name="myDateTime" />
+      <br />
+      <br />
+      <label for="myEmail">Enter your email:</label>
+      <input type="email" id="myEmail" name="myEmail" />
+      <br />
+      <br />
+      <label for="myMonth">Select a month:</label>
+      <input type="month" id="myMonth" name="myMonth" />
+      <br />
+      <br />
+      <label for="myNumber">Enter a number:</label>
+      <input type="number" id="myNumber" name="myNumber" />
+      <br />
+      <br />
+      <label for="myRange">Select a range:</label>
+      <input type="range" id="myRange" name="myRange" min="0" max="100" />
+      <br />
+      <br />
+      <label for="myTel">Enter your phone number:</label>
+      <input type="tel" id="myTel" name="myTel" />
+      <br />
+      <br />
+      <label for="myTime">Select a time:</label>
+      <input type="time" id="myTime" name="myTime" />
+      <br />
+      <br />
+      <label for="myUrl">Enter a URL:</label>
+      <input type="url" id="myUrl" name="myUrl" />
+      <br />
+      <br />
+      <label for="myWeek">Select a week:</label>
+      <input type="week" id="myWeek" name="myWeek" />
+      <br />
+      <br />
+    </div>
+    <script>
+      // Add any JavaScript functionality here
+    </script>
+  </body>
+</html>

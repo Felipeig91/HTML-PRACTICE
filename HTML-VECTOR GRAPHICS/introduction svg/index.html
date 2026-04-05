@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a SVG</title>
+
+    <style>
+      /* Estilos globales de la página */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f7f8fc;
+        color: #1f2937;
+      }
+
+      .page-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        color: #2563eb;
+      }
+
+      p {
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+
+      .svg-example {
+        margin: 1.5rem auto;
+        max-width: 100%;
+        background: #eef2ff;
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .svg-example svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .note {
+        font-size: 0.95rem;
+        color: #4b5563;
+        background: #f8fafc;
+        border-left: 4px solid #2563eb;
+        padding: 12px 16px;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 12px;
+        }
+
+        .page-container {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor principal de la página -->
+    <div class="page-container">
+      <h1>Introducción a SVG</h1>
+
+      <!-- Descripción general de SVG -->
+      <p>
+        SVG significa <strong>Gráficos Vectoriales Escalables</strong>. Es un
+        formato basado en XML para crear y mostrar gráficos vectoriales en la
+        web. A diferencia de las imágenes rasterizadas como JPEG o PNG, los
+        gráficos SVG pueden escalar sin perder calidad. Esto hace que SVG sea
+        ideal para logotipos, iconos, ilustraciones y otros gráficos que deben
+        adaptarse a diferentes tamaños de pantalla.
+      </p>
+
+      <p>
+        SVG permite la creación de gráficos complejos usando formas como
+        <code>&lt;circle&gt;</code>, <code>&lt;rect&gt;</code>,
+        <code>&lt;line&gt;</code> y <code>&lt;path&gt;</code>. También admite el
+        estilo con CSS y la interactividad con JavaScript, lo que lo convierte
+        en una opción poderosa para el diseño web moderno.
+      </p>
+
+      <h2>Ejemplo de uso de SVG</h2>
+      <p>
+        Aquí hay un ejemplo sencillo de SVG incrustado directamente en HTML.
+        Incluye un círculo, un rectángulo, texto y una forma decorativa.
+      </p>
+
+      <!-- Contenedor responsive para el ejemplo SVG -->
+      <div class="svg-example">
+        <svg
+          viewBox="0 0 600 360"
+          role="img"
+          aria-label="Ejemplo sencillo de SVG"
+        >
+          <!-- Fondo del gráfico -->
+          <rect x="0" y="0" width="600" height="360" fill="#eef2ff" />
+
+          <!-- Sol decorativo -->
+          <circle cx="100" cy="80" r="48" fill="#fbbf24" />
+          <circle cx="100" cy="80" r="32" fill="#fde68a" />
+
+          <!-- Montañas con un path -->
+          <path
+            d="M0 280 L140 140 L260 260 L360 120 L480 240 L600 200 L600 360 L0 360 Z"
+            fill="#3b82f6"
+            opacity="0.85"
+          />
+          <path
+            d="M0 280 L140 180 L260 280 L360 160 L480 300 L600 220"
+            stroke="#1d4ed8"
+            stroke-width="8"
+            fill="none"
+            stroke-linejoin="round"
+          />
+
+          <!-- Texto dentro del SVG -->
+          <text
+            x="50%"
+            y="50"
+            text-anchor="middle"
+            font-size="32"
+            fill="#0f172a"
+            font-family="Arial, sans-serif"
+          >
+            SVG Example
+          </text>
+
+          <!-- Iconos de nubes simples -->
+          <ellipse
+            cx="420"
+            cy="80"
+            rx="64"
+            ry="36"
+            fill="#ffffff"
+            opacity="0.9"
+          />
+          <ellipse
+            cx="470"
+            cy="80"
+            rx="40"
+            ry="28"
+            fill="#ffffff"
+            opacity="0.9"
+          />
+          <ellipse
+            cx="380"
+            cy="100"
+            rx="50"
+            ry="28"
+            fill="#ffffff"
+            opacity="0.9"
+          />
+
+          <!-- Línea de tierra -->
+          <rect x="0" y="320" width="600" height="40" fill="#111827" />
+        </svg>
+      </div>
+
+      <div class="note">
+        <strong>Nota:</strong> El contenido SVG se puede estilizar con CSS y
+        escalar automáticamente cuando el tamaño de la ventana del navegador
+        cambia. Este ejemplo usa un <code>viewBox</code> y un estilo responsivo
+        con <code>width: 100%</code> para mantenerse flexible.
+      </div>
+    </div>
+  </body>
+</html>

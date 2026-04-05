@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Youtube Videos in a Web page</title>
+
+    <style>
+      /* Estilos globales de la página */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fb;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      /* Contenedor principal centrado */
+      .page-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        margin-top: 1.8rem;
+        margin-bottom: 0.6rem;
+        color: #1f4e79;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      pre {
+        background: #eef3fb;
+        border: 1px solid #d7e2f1;
+        border-radius: 8px;
+        padding: 16px;
+        overflow-x: auto;
+      }
+
+      code {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        background: #eceff4;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+      }
+
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* Mantener proporción 16:9 */
+        margin: 1.5rem 0;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 600px) {
+        .page-wrapper {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        pre {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor principal para el contenido de la página -->
+    <div class="page-wrapper">
+      <h1>Embed Youtube Videos in a Web page</h1>
+      <p>
+        To embed a YouTube video in a web page, you can use the
+        <code>&lt;iframe&gt;</code> element. Here’s how you can do it:
+      </p>
+
+      <h2>Step 1: Get the Embed Code from YouTube</h2>
+      <p>
+        Go to the YouTube video you want to embed, click on the "Share" button
+        below the video, and then click on "Embed". You will see a code snippet
+        that looks something like this:
+      </p>
+      <pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+      <p>
+        Replace <code>VIDEO_ID</code> with the actual ID of the YouTube video
+        you want to embed.
+      </p>
+
+      <h2>Step 2: Add the Embed Code to Your Web Page</h2>
+      <p>
+        Copy the embed code and paste it into the HTML of your web page where
+        you want the video to appear. For example:
+      </p>
+      <pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+      <p>
+        This will embed the YouTube video with the specified width and height on
+        your web page. You can adjust the width and height values as needed to
+        fit your design.
+      </p>
+
+      <h2>Example</h2>
+      <p>Here’s an example of how the embedded video will look:</p>
+
+      <!-- Contenedor responsive para el iframe del video -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

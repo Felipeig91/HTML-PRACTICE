@@ -1,21 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Metadatos de la página y título -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Forms Practice Problem</title>
     <style>
+      /* Estilos generales y reinicio de márgenes/paddings */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
+      /* Estilo del cuerpo de la página */
       body {
         background-color: #f2f6ff;
         font-family: Arial, sans-serif;
       }
 
+      /* Contenedor principal del formulario */
       .container {
         max-width: 600px;
         margin: 0 auto;
@@ -39,6 +43,7 @@
         padding-bottom: 16px;
       }
 
+      /* Iconos de redes sociales con espacio alrededor */
       .social-icons a {
         display: inline-block;
         width: 50px;
@@ -90,8 +95,28 @@
         transition: border-color 0.3s ease;
       }
 
-      .form-group input:focus {
-        border-bottom-color: #0056ff;
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #0056ff;
+      }
+
+      /* Estilo para el área de texto del mensaje */
+      .form-group textarea {
+        width: 100%;
+        min-height: 120px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        resize: vertical;
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .form-group textarea:focus {
+        box-shadow: 0 0 0 3px rgba(0, 86, 255, 0.12);
       }
 
       .submit-btn {
@@ -123,9 +148,12 @@
     </style>
   </head>
   <body>
+    <!-- Contenedor principal del formulario -->
     <div class="container">
+      <!-- Título principal del formulario -->
       <h1 class="form-heading">Contact Us</h1>
 
+      <!-- Bloque de iconos sociales -->
       <div class="social-icons">
         <a href="https://www.google.com" target="_blank" title="Google">
           <img
@@ -153,6 +181,7 @@
         </a>
       </div>
 
+      <!-- Formulario principal de contacto -->
       <form class="input-container">
         <div class="form-group">
           <label for="name">Full Name</label>
@@ -203,15 +232,6 @@
             id="message"
             name="message"
             placeholder="Enter your message"
-            style="
-              width: 100%;
-              min-height: 120px;
-              padding: 12px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              font-family: Arial, sans-serif;
-              font-size: 16px;
-            "
             required
           ></textarea>
         </div>
@@ -219,6 +239,7 @@
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
 
+      <!-- Pie de página con crédito -->
       <div class="footer">
         <p>&copy; 2024 HTML Forms Practice | EdYoda Digital University</p>
       </div>
